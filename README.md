@@ -40,7 +40,7 @@ Para ejecutar este proyecto localmente, sigue estos pasos:
 
 1. Clona el repositorio:
    ```sh
-   git clone https://github.com/tu-usuario/tu-repositorio.git
+   git clone https://github.com/SamuelCan0/protafolio_personal.git
 
 
 ## Tecnologías Utilizadas
@@ -49,7 +49,7 @@ Para ejecutar este proyecto localmente, sigue estos pasos:
 - JavaScript
 
 ## Autor
-## CanoCode</>
+CanoCode</>
 
 ## Licencia
 Este proyecto está licenciado bajo la Licencia MIT - consulta el archivo LICENSE para más detalles.

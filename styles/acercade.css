@@ -1,0 +1,127 @@
+#sobreMi {
+    height: calc(110vh - 60px);
+    align-items: center;
+    padding: 100px 10%;
+}
+
+.profile-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #183a4f80;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 3px solid #5affe7;
+}
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+}
+
+.profile-info p {
+    margin: 5px 0 0;
+    font-size: 16px;
+    color: #cfd9e2;
+}
+
+.profile-about,
+.profile-experience,
+.profile-education {
+    margin-bottom: 45px;
+}
+
+.profile-about h2,
+.profile-experience h2,
+.profile-education h2 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-about h2::before,
+.profile-experience h2::before,
+.profile-education h2::before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f129'; /* Default icon, you can change it */
+    margin-right: 10px;
+    color: #5affe7;
+}
+
+.profile-about h2::before {
+    content: '\f129'; /* About icon */
+}
+
+.profile-experience h2::before {
+    content: '\f0b1'; /* Experience icon */
+}
+
+.profile-education h2::before {
+    content: '\f19d'; /* Education icon */
+}
+
+.profile-about p,
+.profile-experience ul,
+.profile-education ul {
+    font-size: 16px;
+    color: #cfd9e2;
+}
+
+.profile-experience ul,
+.profile-education ul {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-experience li,
+.profile-education li {
+    margin-bottom: 30px;
+    padding-left: 35px;
+}
+
+.profile-experience h3,
+.profile-education h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+}
+
+.profile-experience p,
+.profile-education p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #cfd9e2;
+    padding-left: 20px;
+}
+
+.profile-experience i,
+.profile-education i {
+    font-size: 24px;
+    color: #fff;
+    margin-right: 10px;
+}
+
+
+@media (max-width: 600px){
+    .profile-picture{
+        width: 150px;
+        height: 150px;
+    }
+}

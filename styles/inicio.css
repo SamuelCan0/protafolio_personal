@@ -1,0 +1,115 @@
+/* estilos de inicio */
+
+#home {
+  height: calc(110vh - 60px);
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+  background-image: url('../image/fondo.png');
+  background-size: cover;
+  background-position: center;
+}
+
+#home .home-container {
+  color: white;
+  max-width: 650px;
+}
+
+#home .home-container h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+#home .home-container p {
+  font-size: 17px;
+  margin: 20px 0 40px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+#home .home-container .btn-box {
+  width: 345px;
+  height: 50px;
+}
+
+#home .home-container .btn-box a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  background: #5affe7;
+  border: 2px solid #5affe7;
+  border-radius: 8px;
+  font-size: 19px;
+  color: #002233;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#home .home-container .btn-box a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #726eff;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+#home .home-container .btn-box a:hover::before {
+  width: 100%;
+}
+
+#home .home-container .home-sci {
+  position: absolute;
+  bottom: 40px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#home .home-container .home-sci a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #5affe7;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #5affe7;
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+  transition: .4s;
+}
+
+#home .home-container .home-sci a:hover{
+    color: #002233;
+}
+
+#home .home-container .home-sci a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #726eff;
+  z-index: -1;
+  transition: .4s;
+}
+
+#home .home-container .home-sci a:hover::before {
+    width: 100%;
+}

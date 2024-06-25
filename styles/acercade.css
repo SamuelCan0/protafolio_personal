@@ -124,4 +124,8 @@
         width: 150px;
         height: 150px;
     }
+
+    #sobreMi {
+        padding: 100px 5%;
+    }
 }

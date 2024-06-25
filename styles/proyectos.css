@@ -37,12 +37,16 @@
     margin-bottom: 10px;
     font-size: 22px;
     font-weight: 600;
+    text-align: center;
 }
 
 .descripcion p{
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     color: #fff;
     font-size: 16px;
-    font-weight: 500;
     text-align: justify;
     line-height: 1.5;
 }

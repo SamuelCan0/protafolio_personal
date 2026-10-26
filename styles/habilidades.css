@@ -1,84 +1,147 @@
-:root {
-  --primary-color: #5affe7;
-  --secondary-color: #183a4f;
-  --text-color: #fff;
-  --background-color:#001321;
-}
-
+/* Skills Section */
 #habilidades {
-  height: calc(110vh - 60px);
-  align-items: center;
-  padding: 100px 10%;
-  background-color: var(--background-color);
+  padding: 80px 20px;
+  position: relative;
 }
 
 #habilidades h1 {
-  color: var(--text-color);
-  font-size: 2.5rem;
+  font-size: 48px;
   font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   text-align: center;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  padding: 0;
 }
 
 .skill {
-  width: 100px;
-  margin: 10px;
+  aspect-ratio: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--secondary-color);
-  border-radius: 10px;
-  border: 2px solid var(--primary-color);
-  padding: 10px;
-  transition: transform 0.3s;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  transition: var(--transition);
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(90, 255, 231, 0.1), rgba(114, 110, 255, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
 }
 
 .skill:hover {
-  transform: scale(1.1);
+  border-color: var(--accent-cyan);
+  background: rgba(90, 255, 231, 0.08);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(90, 255, 231, 0.2);
+}
+
+.skill:hover::before {
+  opacity: 1;
 }
 
 .skill img {
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+  margin-bottom: 12px;
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+.skill:hover img {
+  filter: brightness(1.2);
 }
 
 .skill p {
-  margin: 5px 0 0;
-  font-size: 1rem;
-  color: var(--primary-color);
+  font-size: 13px;
+  color: var(--text-light);
   text-align: center;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-@media (max-width: 600px) {
+.skill:hover p {
+  color: var(--accent-cyan);
+}
+
+/* Stagger animation */
+.skill:nth-child(1) { animation-delay: 0.1s; }
+.skill:nth-child(2) { animation-delay: 0.15s; }
+.skill:nth-child(3) { animation-delay: 0.2s; }
+.skill:nth-child(4) { animation-delay: 0.25s; }
+.skill:nth-child(5) { animation-delay: 0.3s; }
+.skill:nth-child(6) { animation-delay: 0.35s; }
+.skill:nth-child(7) { animation-delay: 0.4s; }
+.skill:nth-child(8) { animation-delay: 0.45s; }
+.skill:nth-child(9) { animation-delay: 0.5s; }
+.skill:nth-child(10) { animation-delay: 0.55s; }
+.skill:nth-child(11) { animation-delay: 0.6s; }
+.skill:nth-child(12) { animation-delay: 0.65s; }
+.skill:nth-child(13) { animation-delay: 0.7s; }
+.skill:nth-child(14) { animation-delay: 0.75s; }
+
+/* Responsive */
+@media (max-width: 768px) {
   #habilidades {
-    height: auto;
-    padding-bottom: 2%;
+    padding: 60px 15px;
+  }
+
+  #habilidades h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+  }
+
+  .skill {
+    padding: 15px;
   }
 }
 
-@media (min-width: 600px) {
-  .skill {
-    width: 90px;
+@media (max-width: 480px) {
+  #habilidades {
+    padding: 40px 15px;
   }
-}
 
-@media (min-width: 768px) {
-  .skill {
-    width: 100px;
+  #habilidades h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
   }
-}
 
-@media (min-width: 992px) {
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 12px;
+  }
+
   .skill {
-    width: 125px;
+    padding: 12px;
+  }
+
+  .skill p {
+    font-size: 11px;
   }
 }

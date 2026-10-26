@@ -1,114 +1,169 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-}
-
-html{
-    scroll-behavior: smooth;
-}
-
-body{
-    height: calc(100vh - 60px);
-    background-color: #001321;
-}
-
-li{
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.2rem;
-}
-
-a:hover{
-    color: #726EFF;
-}
-
-/*Header*/
-header{
+/* Header/Navbar */
+header {
     position: fixed;
     width: 100%;
-    z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
-    background-color: #001321 /* Fondo semi-transparente */
+    z-index: 1000;
+    background: rgba(15, 20, 25, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(90, 255, 231, 0.1);
+    padding: 12px 0;
+    transition: all 0.3s ease;
 }
 
-.navbar{
+header.scrolled {
+    background: rgba(15, 20, 25, 0.98);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
     max-width: 1200px;
-    margin-right: 25px;
-    margin-left: 25px;
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Espaciado entre logo y links */
-    padding-bottom: 10px;
+    justify-content: space-between;
 }
 
-.navbar .logo img{
-    height: 4.5rem;
+.navbar .logo img {
+    height: 3.5rem;
+    transition: transform 0.3s ease;
 }
 
-.navbar .links{
+.navbar .logo img:hover {
+    transform: scale(1.05);
+}
+
+.navbar .links {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
+    list-style: none;
+    align-items: center;
 }
 
-.navbar .toggle_btn{
-    color: #fff;
+.navbar .links a {
+    color: var(--text-light);
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    letter-spacing: 0.5px;
+}
+
+.navbar .links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+    transition: width 0.3s ease;
+}
+
+.navbar .links a:hover {
+    color: var(--accent-cyan);
+}
+
+.navbar .links a:hover::after {
+    width: 100%;
+}
+
+.navbar .toggle_btn {
+    color: var(--text-white);
     font-size: 1.5rem;
     cursor: pointer;
     display: none;
+    transition: color 0.3s ease;
 }
 
-/*Menu desplegable*/
-.dropdown_menu{
+.navbar .toggle_btn:hover {
+    color: var(--accent-cyan);
+}
+
+/* Dropdown Menu */
+.dropdown_menu {
     display: none;
     position: absolute;
-    right: 2rem;
-    top: 80px;
+    right: 20px;
+    top: 70px;
     height: 0;
     width: 300px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border-radius: 10px;
+    background: rgba(26, 35, 50, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(90, 255, 231, 0.2);
+    border-radius: 12px;
     overflow: hidden;
-    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: height 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
-.dropdown_menu.open{
-    height: 140px;
+.dropdown_menu.open {
+    height: 180px;
 }
 
-.dropdown_menu li{
-    padding: 0.7rem;
+.dropdown_menu li {
+    padding: 12px 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    list-style: none;
+    border-bottom: 1px solid rgba(90, 255, 231, 0.1);
+    transition: all 0.3s ease;
 }
 
+.dropdown_menu li:last-child {
+    border-bottom: none;
+}
 
+.dropdown_menu li a {
+    width: 100%;
+    color: var(--text-light);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
 
-/*responsive*/
-@media (max-width:720px){
-    .navbar .links{
+.dropdown_menu li:hover a {
+    color: var(--accent-cyan);
+    padding-left: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 15px;
+    }
+
+    .navbar .logo img {
+        height: 3rem;
+    }
+
+    .navbar .links {
         display: none;
     }
 
-    .navbar .toggle_btn{
+    .navbar .toggle_btn {
         display: block;
     }
 
-    .dropdown_menu{
+    .dropdown_menu {
         display: block;
+        right: 15px;
     }
 }
 
+@media (max-width: 576px) {
+    .navbar .logo img {
+        height: 2.5rem;
+    }
 
-@media (max-width:576px){
-    .dropdown_menu{
-        left: 2rem;
-        width: unset;
+    .dropdown_menu {
+        width: calc(100vw - 30px);
+        right: 15px;
+    }
+
+    .dropdown_menu.open {
+        height: auto;
+        max-height: 300px;
+        overflow-y: auto;
     }
 }

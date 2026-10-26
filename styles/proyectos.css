@@ -1,171 +1,187 @@
+/* Projects Section */
 #proyectos {
-  height: calc(110vh - 60px);
+  padding: 80px 20px;
+  position: relative;
+}
+
+#proyectos h1 {
+  font-size: 48px;
+  margin-bottom: 60px;
+  text-align: center;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.proyectos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+}
+
+.proyecto {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(90, 255, 231, 0.15);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: var(--transition);
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.proyecto:nth-child(1) { animation-delay: 0.1s; }
+.proyecto:nth-child(2) { animation-delay: 0.2s; }
+.proyecto:nth-child(3) { animation-delay: 0.3s; }
+
+.proyecto:hover {
+  border-color: var(--accent-cyan);
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(90, 255, 231, 0.2);
+}
+
+.proyecto img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  filter: brightness(0.8);
+}
+
+.proyecto:hover img {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+.descripcion {
+  padding: 24px;
+}
+
+.descripcion h3 {
+  color: var(--text-white);
+  margin: 0 0 12px 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.descripcion p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: var(--text-light);
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.tecnologias i {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
-  padding: 100px 10%;
+  background: rgba(90, 255, 231, 0.1);
+  border: 1px solid var(--accent-cyan);
+  border-radius: 50%;
+  font-size: 18px;
+  color: var(--accent-cyan);
+  transition: var(--transition);
 }
 
-.proyectos-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.proyecto:hover .tecnologias i {
+  background: var(--accent-cyan);
+  color: var(--bg-dark);
 }
 
-.proyecto{
-    width: 30%;
-    margin: 10px;
-    background-color: #183a4f;
-    border-radius: 15px;
-    border: 2px solid #5affe7;
-    overflow: hidden;
+.ver-codigo {
+  width: 100%;
+  padding: 12px 20px;
+  background: var(--accent-cyan);
+  color: var(--bg-dark);
+  border: 2px solid var(--accent-cyan);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.proyecto img{
-    width: 100%;
+.ver-codigo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-purple);
+  z-index: -1;
+  transition: left 0.3s ease;
+}
+
+.ver-codigo:hover {
+  border-color: var(--accent-purple);
+  color: var(--text-white);
+  transform: translateY(-2px);
+}
+
+.ver-codigo:hover::before {
+  left: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #proyectos {
+    padding: 60px 15px;
+  }
+
+  #proyectos h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .proyectos-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .proyecto img {
     height: 200px;
-    object-fit: cover;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+  }
 }
 
-.descripcion{
-    padding: 10px;
-}
+@media (max-width: 480px) {
+  #proyectos {
+    padding: 40px 15px;
+  }
 
-.descripcion h3{
-    margin-top: 0;
-    color: #fff;
-    margin-bottom: 10px;
-    font-size: 22px;
-    font-weight: 600;
-    text-align: center;
-}
+  #proyectos h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
 
-.descripcion p{
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    color: #fff;
-    font-size: 16px;
-    text-align: justify;
-    line-height: 1.5;
-}
+  .descripcion {
+    padding: 16px;
+  }
 
-.tecnologias{
-    display: flex;
-    justify-content: space-evenly;
-    bottom: 40px;
-    width: 100%;
-    padding-bottom: 5px;
-}
-
-.tecnologias i{
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: 2px solid #5affe7;
-    border-radius: 50%;
-    font-size: 20px;
-    color: #5affe7;
-    overflow: hidden;
-}
-
-.ver-codigo{
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    width: 100%;
-    padding: 10px;
-    background-color: #5affe7;
-    color: #001321;
-    border: none;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    cursor: pointer;
+  .descripcion h3 {
     font-size: 18px;
-    color: #002233;
-    font-weight: 600;
-    letter-spacing: 1px;
-    border: 2px solid #5affe7;
-    z-index: 1;
-    overflow: hidden;
-}
+  }
 
-.ver-codigo::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background-color: #726eff;
-    z-index: -1;
-    transition: 0.5s;
-}
-
-.ver-codigo:hover::before{
-    width: 100%;
-}
-
-.ver-mas{
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-left: 32%;
-    margin-right: 32%;
-    padding: 10px;
-    background-color: #5affe7;
-    color: #001321;
-    border: 2px solid #5affe7;
-    border-radius:0 0 15px 15px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    z-index: 1;
-    overflow: hidden;
-    margin-top: 20px;
-}
-
-.ver-mas::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background-color: #726eff;
-    z-index: -1;
-    transition: 0.5s;
-}
-
-.ver-mas:hover::before{
-    width: 100%;
-}
-
-
-
-@media screen and (max-width: 768px) {
-    .proyecto{
-        width: 100%;
-    }
-
-    #proyectos{
-        height: max-content;
-    }
-
-    .ver-mas{
-        margin-left: 4%;
-        margin-right: 4%;
-    }
+  .descripcion p {
+    font-size: 13px;
+    -webkit-line-clamp: 2;
+  }
 }
 
 

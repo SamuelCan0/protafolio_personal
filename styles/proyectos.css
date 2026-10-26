@@ -80,6 +80,9 @@
   flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 20px;
+  padding: 12px;
+  background: rgba(90, 255, 231, 0.05);
+  border-radius: 8px;
 }
 
 .tecnologias i {
@@ -94,6 +97,7 @@
   font-size: 18px;
   color: var(--accent-cyan);
   transition: var(--transition);
+  padding: 8px;
 }
 
 .proyecto:hover .tecnologias i {

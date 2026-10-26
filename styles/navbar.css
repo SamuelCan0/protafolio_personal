@@ -2,12 +2,14 @@
 header {
     position: fixed;
     width: 100%;
-    z-index: 1000;
-    background: rgba(15, 20, 25, 0.95);
-    backdrop-filter: blur(10px);
+    z-index: 9999;
+    background: rgba(15, 20, 25, 0.98);
+    backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(90, 255, 231, 0.1);
     padding: 12px 0;
     transition: all 0.3s ease;
+    top: 0;
+    left: 0;
 }
 
 header.scrolled {

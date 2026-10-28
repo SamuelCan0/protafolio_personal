@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles/proyectos.css" />
     <link rel="stylesheet" href="styles/habilidades.css" />
     <link rel="stylesheet" href="styles/acercade.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
     <title>Samuel Cano | Desarrollador Frontend</title>
 </head>
 
@@ -43,24 +44,28 @@
 
     <section id="home">
         <div class="home-container">
-            <h1>
-                Bienvenido a <br />
-                Mi Portafolio Personal
-            </h1>
-            <p>
-                Soy Samuel Cano Olmos un desarrollador web especializado en Frontend.
-                Mi pasión es crear experiencias digitales atractivas y funcionales.
-            </p>
-            <div class="btn-box">
-                <a href="docs/cv_samuel_cano_olmos.pdf" download="cv_samuel_cano_olmos">Descargar CV</a>
-            </div>
+            <div class="home-content">
+                <h1>
+                    Bienvenido a <br />
+                    Mi Portafolio Personal
+                </h1>
+                <p>
+                    Soy Samuel Cano Olmos un desarrollador web especializado en Frontend.
+                    Mi pasión es crear experiencias digitales atractivas y funcionales.
+                </p>
+                <div class="btn-box">
+                    <a href="docs/cv_samuel_cano_olmos.pdf" download="cv_samuel_cano_olmos" aria-label="Descargar CV en PDF">Descargar CV</a>
+                </div>
 
-            <div class="home-sci">
-                <a href="https://wa.me/4481034268" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="mailto:samuelco99.dm@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-                <a href="https://github.com/SamuelCan0" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="http://www.linkedin.com/in/samuelcanodm/" target="_blank"><i
-                        class="fa-brands fa-linkedin"></i></a>
+                <div class="home-sci">
+                    <a href="https://wa.me/4481034268" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="mailto:samuelco99.dm@gmail.com" aria-label="Enviar correo electrónico"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://github.com/SamuelCan0" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil de GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="http://www.linkedin.com/in/samuelcanodm/" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil de LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="profile-img">
+                <img src="image/perfil.jpeg" loading="lazy" alt="Samuel Cano - Desarrollador Frontend" />
             </div>
         </div>
     </section>
@@ -270,6 +275,40 @@
             </div>
         </div>
     </section>
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Samuel Cano</h3>
+                    <p>Desarrollador Frontend apasionado por crear experiencias digitales excepcionales.</p>
+                    <div class="footer-socials">
+                        <a href="https://wa.me/4481034268" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="mailto:samuelco99.dm@gmail.com" aria-label="Enviar correo electrónico"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://github.com/SamuelCan0" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil de GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="http://www.linkedin.com/in/samuelcanodm/" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil de LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#proyectos">Proyectos</a></li>
+                        <li><a href="#habilidades">Habilidades</a></li>
+                        <li><a href="#sobreMi">Sobre Mí</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section footer-cta">
+                    <h4>¿Trabajemos Juntos?</h4>
+                    <p>Estoy disponible para nuevos proyectos y colaboraciones.</p>
+                    <a href="mailto:samuelco99.dm@gmail.com" class="footer-btn">Contactame</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Samuel Cano. Todos los derechos reservados. Diseñado y desarrollado con <span class="heart">❤️</span> usando HTML, CSS y JavaScript.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/navbar.js"></script>
 </body>

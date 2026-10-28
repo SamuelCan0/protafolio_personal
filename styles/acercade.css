@@ -4,6 +4,13 @@
   position: relative;
 }
 
+#sobreMi h2 {
+  background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .profile-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -12,6 +19,12 @@
   border-radius: 16px;
   padding: 40px;
   animation: fadeInUp 0.8s ease-out;
+  transition: var(--transition);
+}
+
+.profile-container:hover {
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 8px 32px rgba(90, 255, 231, 0.1);
 }
 
 /* Profile Header */

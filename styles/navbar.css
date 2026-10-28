@@ -48,6 +48,9 @@ header.scrolled {
     font-weight: 500;
     position: relative;
     letter-spacing: 0.5px;
+    padding: 8px 4px;
+    border-radius: 4px;
+    transition: color 0.3s ease;
 }
 
 .navbar .links a::after {
@@ -69,16 +72,31 @@ header.scrolled {
     width: 100%;
 }
 
+.navbar .links a:focus-visible {
+    outline: 2px solid var(--accent-cyan);
+    outline-offset: 2px;
+}
+
 .navbar .toggle_btn {
     color: var(--text-white);
     font-size: 1.5rem;
     cursor: pointer;
     display: none;
     transition: color 0.3s ease;
+    padding: 8px;
+    border-radius: 4px;
+    background: transparent;
+    border: none;
 }
 
 .navbar .toggle_btn:hover {
     color: var(--accent-cyan);
+    background: rgba(90, 255, 231, 0.1);
+}
+
+.navbar .toggle_btn:focus-visible {
+    outline: 2px solid var(--accent-cyan);
+    outline-offset: 2px;
 }
 
 /* Dropdown Menu */

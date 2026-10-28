@@ -10,15 +10,20 @@
   margin-bottom: 60px;
   text-align: center;
   animation: fadeInUp 0.8s ease-out;
+  background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .skills-container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   gap: 20px;
   padding: 0;
+  justify-items: center;
 }
 
 .skill {
@@ -37,6 +42,12 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  min-height: 140px;
+}
+
+.skill:focus-within {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
 }
 
 .skill::before {

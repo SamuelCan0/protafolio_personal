@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "ui-design": {
+      "source": "pproenca/dot-skills",
+      "sourceType": "github",
+      "skillPath": "skills/.curated/ui-design/SKILL.md",
+      "computedHash": "2680679231ac32260b8de60f6678f8c9d9730d19c0b87eeede007926c637bd37"
+    }
+  }
+}

@@ -8,7 +8,8 @@
       "Bash(npx skills *)",
       "Bash(curl -s http://localhost:8000)",
       "Bash(pkill *)",
-      "Bash(git commit -m 'Agregar botón '\\\\''Ver más en GitHub'\\\\'' debajo de proyectos *)"
+      "Bash(git commit -m 'Agregar botón '\\\\''Ver más en GitHub'\\\\'' debajo de proyectos *)",
+      "Bash(git commit *)"
     ]
   }
 }
